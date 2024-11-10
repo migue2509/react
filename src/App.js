@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import TextTest from './components/TextTest';
+import Var from './components/Var';
 
 function App() {
   return (
@@ -17,6 +19,16 @@ function App() {
         >
           Learn React
         </a>
+
+        <br />
+        <TextTest  text={"TITULO 1"} id={1} classComponent={"class-title"}/>
+        <TextTest  text={"TITULO 2"} id={2} classComponent={"class-modificar"}/>
+
+        <br />
+
+        <Var key={1} key2={2} />
+
+        
       </header>
     </div>
   );

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 const Var = ({key, key2 }) => {
 
-    const [variable, setVariable] = useState(false)
+    const [variable, setVariable] = useState("M")
 
 
     useEffect(() => {
@@ -13,7 +13,9 @@ const Var = ({key, key2 }) => {
 
 
     const handleChange = () =>{
-        setVariable(!variable)
+        let letra = prompt("añade una letra")
+        
+        setVariable(variable + letra )
     }
     
 
@@ -21,6 +23,8 @@ const Var = ({key, key2 }) => {
         <div id={key}>
             <span id={key2}>  
             </span>
+            <h1>Añade letra por letra tu nombre</h1>
+            <h2>{variable}  </h2>
             <button onClick= {handleChange}>ACTUALIZAR</button>
         </div>
     )
